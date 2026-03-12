@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Asset&family=Gravitas+One&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LunasBotanica</title>
+    <style>
+        br{
+            display: block;
+            content:"";
+            margin-top: 100px;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            height: 100vh;
+            margin: 0;
+            padding-top: 100px;
+            background: linear-gradient(to bottom, #e8f5e8, #c8e6c9);
+        }
+        h1 {
+            margin-bottom: 5px;
+            font-family: 'Gravitas One', cursive;
+            font-size: 48px;
+            color: #2e7d32;
+        }
+        p {
+            text-align: center;
+            max-width: 600px;
+            color: #388e3c;
+        }
+        .plant {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+        .plant img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .plant h2 {
+            cursor: pointer;
+            margin-top: 10px;
+            color: #2e7d32;
+        }
+        .description {
+            position: relative;
+            width: 300px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+        }
+        .description.show {
+            max-height: 800px;
+            padding: 10px;
+            box-sizing: border-box;
+            background-color: #e8f5e8;
+            border-radius: 10px;
+        }
+        .description p {
+            text-align: left;
+            max-width: 600px;
+            margin: 0 auto;
+            font-family: Calibri;
+            color: #388e3c;
+        }
+        .plants-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 100px;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        #search {
+            margin-top: 20px;
+            padding: 10px;
+            width: 300px;
+            border-radius: 5px;
+            border: 1px solid #388e3c;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>LunasBotanica</h1>
+    <p>
+        Welcome to LunasBotanica! This website features medicinal herbs and plants commonly used in traditional remedies in the Philippines. All plants presented here are recognized and approved by the Department of Health (Philippines). 
+        <br/><br/>
+        To learn more about each plant and its benefits, simply click on its name.
+    </p>
+    <input type="text" id="search" placeholder="Search for plants...">
+    <div id="plants-container">
+    <div class="plants-row">
+        <div class="plant">
+            <img src="LAGUNDI.jpg" alt="Lagundi">
+            <h2 id="lagundi-name">Lagundi (Vitex negundo)</h2>
+            <div id="lagundi-desc" class="description">
+                <p> 
+                    ✉️Description
+                    <br/>
+                    Lagundi (scientific name: Vitex negundo) is a medicinal shrub commonly used in traditional Filipino herbal medicine. It is recognized by the Department of Health (Philippines) as one of the approved herbal plants for treating cough and respiratory conditions.
+                    <br/><br/>
+                    🌿 Appearance
+                    <br/>
+                    Lagundi is a small shrub or tree that grows about 2–5 meters tall. It has five-pointed leaves, a distinct herbal smell, and produces small violet or bluish flowers.
+                    <br/><br/>
+                    📍 Location
+                    <br/>
+                    It commonly grows in tropical areas, especially in the Philippines, as well as in South and Southeast Asia. It is often found in gardens, roadsides, and open fields.
+                    <br/><br/>
+                    ⚕️ Medicinal Properties
+                    <br/>
+                    Lagundi has anti-inflammatory, antibacterial, and bronchodilator properties, which help reduce inflammation and open the airways.
+                    <br/><br/>
+                    🩺 Specific Illness or Symptoms
+                    <br/>
+                    Cough, Asthma, Fever, Sore throat, Mild respiratory infections
+                    <br/><br/>
+                    💊 How to Prepare
+                    <br/>
+                    ⭐Lagundi tea/decoction: Boil about 5–7 fresh leaves in 2 cups of water for 10–15 minutes, then drink when warm.
+                    <br/>
+                    ⭐Syrup or tablets: Commercial lagundi medicines are also available.
+                </p>
+            </div>
+        </div>
+        <div class="plant">
+            <img src="AKAPULKO.jpg" alt="Akapulko">
+            <h2 id="akapulko-name">Akapulko (Senna alata)</h2>
+            <div id="akapulko-desc" class="description">
+                <p> 
+                    ✉️Description
+                    <br/>
+                    Akapulko (scientific name: Senna alata) is a medicinal plant recognized by the Department of Health (Philippines) for treating fungal skin infections.
+                    <br/><br/>
+                    🌿 Appearance
+                    <br/>
+                    A shrub with large green leaves and bright yellow candle-like flowers.
+                    <br/><br/>
+                    📍 Location
+                    <br/>
+                    Common in tropical areas, especially in the Philippines.                    <br/><br/>
+                    ⚕️ Medicinal Properties
+                    <br/>
+                    Akapulko has antifungal, anti-inflammatory, and antimicrobial properties, which help treat fungal skin infections.
+                    <br/><br/>
+                    🩺 Specific Illness or Symptoms
+                    <br/>
+                    Ringworm, athlete’s foot, and other fungal infections.
+                    <br/><br/>
+                    💊 How to Prepare
+                    <br/>
+                    ⭐Crush fresh leaves and apply the leaf extract directly on the affected skin.
+                </p>            </div>
+        </div>
+        <div class="plant">
+            <img src="GARLIC.jpg" alt="Garlic">
+            <h2 id="garlic-name">Garlic (Allium sativum)</h2>
+            <div id="garlic-desc" class="description">
+                <p> 
+                    ✉️Description
+                    <br/>
+                    Garlic (scientific name: Allium sativum) is a widely used herb known for its medicinal and culinary uses.                    <br/><br/>
+                    🌿 Appearance
+                    <br/>
+                    A bulb plant with white cloves wrapped in thin skin.                    
+                    <br/><br/>
+                    📍 Location
+                    <br/>
+                    Cultivated worldwide including the Philippines.                    
+                    <br/><br/>
+                    ⚕️ Medicinal Properties
+                    <br/>
+                    Garlic has anti-inflammatory, antibacterial, and cardiovascular properties, which help reduce inflammation and support heart health.
+                    <br/><br/>
+                    🩺 Specific Illness or Symptoms
+                    <br/>
+                    High blood pressure, infections, and high cholesterol.
+                    <br/><br/>
+                    💊 How to Prepare
+                    <br/>
+                    ⭐Eat raw crushed garlic or add it to food
+                </p> 
+            </div>    
+        </div>
+    </div>
+    <div class="plants-row">
+        <div class="plant">
+            <img src="SAMBONG.jpg" alt="Sambong">
+            <h2 id="sambong-name">Sambong (Blumea balsamifera)</h2>
+            <div id="sambong-desc" class="description">
+                <p>Sambong (Blumea balsamifera) is a flowering plant native to the Philippines. It is one of the ten herbal medicines endorsed by the Philippine Department of Health (DOH) for safe and effective use. Sambong is commonly used for the treatment of kidney stones and urinary tract infections. It has been traditionally used as a diuretic. Studies have shown that Sambong has diuretic, anti-inflammatory, and antimicrobial properties.</p>
+            </div>
+        </div>
+        <div class="plant">
+            <img src="AMPALAYA.jpg" alt="Ampalaya">
+            <h2 id="ampalaya-name">Ampalaya (Momordica charantia)</h2>
+            <div id="ampalaya-desc" class="description">
+                <p>Ampalaya (Momordica charantia) is a vine plant native to the Philippines. It is one of the ten herbal medicines endorsed by the Philippine Department of Health (DOH) for safe and effective use. Ampalaya is commonly used for the management of diabetes mellitus. It has been traditionally used to lower blood sugar levels. Studies have shown that Ampalaya has hypoglycemic and antioxidant properties.</p>
+            </div>
+        </div>
+        <div class="plant">
+            <img src="BAYABAS.jpg" alt="Bayabas">
+            <h2 id="bayabas-name">Bayabas (Psidium guajava)</h2>
+            <div id="bayabas-desc" class="description">
+                <p>Bayabas (Psidium guajava) is a tropical tree native to the Philippines. It is one of the ten herbal medicines endorsed by the Philippine Department of Health (DOH) for safe and effective use. Bayabas is commonly used for the treatment of diarrhea and gastroenteritis. It has been traditionally used as an antidiarrheal agent. Studies have shown that Bayabas has antimicrobial and antidiarrheal properties.</p>
+            </div>
+        </div>
+    </div>
+    <div class="plants-row">
+        <div class="plant">
+            <img src="PHILIPPINE TEA TREE.jpg" alt="Philippine Tea Tree">
+            <h2 id="philippineteatree-name">Philippine Tea Tree (Ehretia microphylla)</h2>
+            <div id="philippineteatree-desc" class="description">
+                <p>Philippine Tea Tree (Ehretia microphylla) is a deciduous tree native to the Philippines. It is one of the ten herbal medicines endorsed by the Philippine Department of Health (DOH) for safe and effective use. Philippine Tea Tree is commonly used for the treatment of skin infections and as an insecticide. It has been traditionally used for its antimicrobial and insecticidal properties. Studies have shown that Philippine Tea Tree has antimicrobial and insecticidal properties.</p>
+            </div>
+        </div>
+        <div class="plant">
+            <img src="NIYUG-NIYOGAN.jpg" alt="Niyug-niyogan">
+            <h2 id="niyogniyogan-name">Niyug-niyogan (Combretum indicum)</h2>
+            <div id="niyogniyogan-desc" class="description">
+                <p>Niyug-niyogan (Combretum indicum) is a vine plant native to the Philippines. It is one of the ten herbal medicines endorsed by the Philippine Department of Health (DOH) for safe and effective use. Niyug-niyogan is commonly used for the treatment of intestinal parasites. It has been traditionally used as an anthelmintic. Studies have shown that Niyug-niyogan has antiparasitic properties.</p>
+            </div>
+        </div>
+        <div class="plant">
+            <img src="MINT.jpg" alt="Mint">
+            <h2 id="yerbabuena-name">Yerba Buena (Clinopodium douglasii)</h2>
+            <div id="yerbabuena-desc" class="description">
+                <p>Yerba Buena (Clinopodium douglasii) is an aromatic herb native to the Philippines. It is one of the ten herbal medicines endorsed by the Philippine Department of Health (DOH) for safe and effective use. Yerba Buena is commonly used for the relief of pain, headache, and rheumatism. It has been traditionally used as an analgesic. Studies have shown that Yerba Buena has analgesic and anti-inflammatory properties.</p>
+            </div>
+        </div>
+    </div>
+    <div class="plants-row">
+        <div class="plant">
+            <img src="SILVER BUSH.JPG" alt="Silver Bush">
+            <h2 id="silverbush-name">Ulasimang Bato (Peperomia pellucida)</h2>
+            <div id="silverbush-desc" class="description">
+                <p>Ulasimang Bato (Peperomia pellucida) is a shrub native to the Philippines. It is one of the ten herbal medicines endorsed by the Philippine Department of Health (DOH) for safe and effective use. Ulasimang Bato is commonly used for the treatment of wounds, skin infections, and as an antidote for scorpion stings. It has been traditionally used for wound healing. Studies have shown that Ulasimang Bato has antimicrobial and wound-healing properties.</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function toggleDesc(nameId, descId) {
+            document.getElementById(nameId).addEventListener('click', function() {
+                var desc = document.getElementById(descId);
+                desc.classList.toggle('show');
+            });
+        }
+        toggleDesc('lagundi-name', 'lagundi-desc');
+        toggleDesc('akapulko-name', 'akapulko-desc');
+        toggleDesc('garlic-name', 'garlic-desc');
+        toggleDesc('sambong-name', 'sambong-desc');
+        toggleDesc('ampalaya-name', 'ampalaya-desc');
+        toggleDesc('bayabas-name', 'bayabas-desc');
+        toggleDesc('philippineteatree-name', 'philippineteatree-desc');
+        toggleDesc('niyogniyogan-name', 'niyogniyogan-desc');
+        toggleDesc('yerbabuena-name', 'yerbabuena-desc');
+        toggleDesc('silverbush-name', 'silverbush-desc');
+
+        // Search functionality
+        const searchInput = document.getElementById('search');
+        const plantsContainer = document.getElementById('plants-container');
+        const allPlants = Array.from(document.querySelectorAll('.plant'));
+
+        searchInput.addEventListener('input', function() {
+            const query = this.value.toLowerCase();
+            const matchingPlants = allPlants.filter(plant => {
+                const name = plant.querySelector('h2').textContent.toLowerCase();
+                const desc = plant.querySelector('.description p').textContent.toLowerCase();
+                return name.includes(query) || desc.includes(query);
+            });
+
+            // Clear the container
+            plantsContainer.innerHTML = '';
+
+            // Create new rows with 3 columns each
+            for (let i = 0; i < matchingPlants.length; i += 3) {
+                const row = document.createElement('div');
+                row.className = 'plants-row';
+                for (let j = i; j < i + 3 && j < matchingPlants.length; j++) {
+                    row.appendChild(matchingPlants[j]);
+                }
+                plantsContainer.appendChild(row);
+            }
+        });
+
+        document.addEventListener('click', function(event) {
+            var desc1 = document.getElementById('lagundi-desc');
+            var name1 = document.getElementById('lagundi-name');
+            var desc2 = document.getElementById('akapulko-desc');
+            var name2 = document.getElementById('akapulko-name');
+            var desc3 = document.getElementById('garlic-desc');
+            var name3 = document.getElementById('garlic-name');
+            var desc4 = document.getElementById('sambong-desc');
+            var name4 = document.getElementById('sambong-name');
+            var desc5 = document.getElementById('ampalaya-desc');
+            var name5 = document.getElementById('ampalaya-name');
+            var desc6 = document.getElementById('bayabas-desc');
+            var name6 = document.getElementById('bayabas-name');
+            var desc7 = document.getElementById('philippineteatree-desc');
+            var name7 = document.getElementById('philippineteatree-name');
+            var desc8 = document.getElementById('niyogniyogan-desc');
+            var name8 = document.getElementById('niyogniyogan-name');
+            var desc9 = document.getElementById('yerbabuena-desc');
+            var name9 = document.getElementById('yerbabuena-name');
+            var desc10 = document.getElementById('silverbush-desc');
+            var name10 = document.getElementById('silverbush-name');
+            if ((!desc1.contains(event.target) && !name1.contains(event.target)) &&
+                (!desc2.contains(event.target) && !name2.contains(event.target)) &&
+                (!desc3.contains(event.target) && !name3.contains(event.target)) &&
+                (!desc4.contains(event.target) && !name4.contains(event.target)) &&
+                (!desc5.contains(event.target) && !name5.contains(event.target)) &&
+                (!desc6.contains(event.target) && !name6.contains(event.target)) &&
+                (!desc7.contains(event.target) && !name7.contains(event.target)) &&
+                (!desc8.contains(event.target) && !name8.contains(event.target)) &&
+                (!desc9.contains(event.target) && !name9.contains(event.target)) &&
+                (!desc10.contains(event.target) && !name10.contains(event.target))) {
+                desc1.classList.remove('show');
+                desc2.classList.remove('show');
+                desc3.classList.remove('show');
+                desc4.classList.remove('show');
+                desc5.classList.remove('show');
+                desc6.classList.remove('show');
+                desc7.classList.remove('show');
+                desc8.classList.remove('show');
+                desc9.classList.remove('show');
+                desc10.classList.remove('show');
+            }
+        });
+    </script>
+</body>
+
+</html>
